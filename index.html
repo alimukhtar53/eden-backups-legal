@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eden Backups — Privacy Policy &amp; Terms</title>
+<meta name="description" content="Privacy policy and terms of service for Eden Backups, a private development OAuth application.">
+<meta name="robots" content="noindex">
+<style>
+  :root { --fg:#1a1a1a; --muted:#5a6472; --line:#e3e7ec; --bg:#fff; --accent:#2b6cb0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e6e9ee; --muted:#9aa4b2; --line:#2a3038; --bg:#14171b; --accent:#7bb3e8; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  main { max-width:720px; margin:0 auto; padding:56px 24px 96px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 6px; letter-spacing:-0.02em; }
+  .updated { color:var(--muted); font-size:.9rem; margin:0 0 40px; }
+  .notice {
+    border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:6px; padding:14px 18px; margin:0 0 40px; font-size:.94rem; color:var(--muted);
+  }
+  h2 { font-size:1.15rem; margin:40px 0 10px; letter-spacing:-0.01em; }
+  h2:first-of-type { margin-top:0; }
+  p, li { color:var(--fg); }
+  ul { padding-left:22px; }
+  li { margin:6px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  hr { border:0; border-top:1px solid var(--line); margin:44px 0; }
+  footer { color:var(--muted); font-size:.88rem; margin-top:44px; }
+  code { background:rgba(128,128,128,.14); padding:1px 5px; border-radius:4px; font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Eden Backups</h1>
+  <p class="updated">Privacy Policy &amp; Terms of Service — last updated 24 October 2026</p>
+
+  <p class="notice">
+    Eden Backups is a <strong>private, single-user development application</strong>. It is not
+    offered to the public, has no end users other than its owner, and is not distributed. This
+    page exists to satisfy OAuth provider requirements for application registration.
+  </p>
+
+  <h2>1. What this application is</h2>
+  <p>
+    Eden Backups is an internal automation tool operated by a single individual. It mirrors
+    database backup archives from a self-hosted object store (MinIO) to a private Google Drive
+    folder owned by the same individual. The application is not listed publicly, has no sign-up,
+    and accepts no users beyond its operator.
+  </p>
+
+  <h2>2. Information we access</h2>
+  <p>The application requests the Google Drive scope solely to perform the mirroring described above. Specifically it:</p>
+  <ul>
+    <li>Creates and reads files inside a single dedicated Drive folder</li>
+    <li>Reads file metadata (name, size, checksum) to verify transfers completed correctly</li>
+  </ul>
+  <p>
+    It does <strong>not</strong> read, scan, index, share, or transmit the contents of any other
+    file in the operator's Google account.
+  </p>
+
+  <h2>3. How data is used and stored</h2>
+  <ul>
+    <li>Backup archives are copied from the operator's own MinIO instance to the operator's own Google Drive.</li>
+    <li>No data is copied to, processed by, or stored on any third-party server.</li>
+    <li>OAuth credentials are stored locally on the operator's machine with restricted file permissions.</li>
+    <li>No analytics, tracking, telemetry, or advertising is used.</li>
+  </ul>
+
+  <h2>4. Data sharing</h2>
+  <p>
+    No data is sold, rented, shared, or disclosed to any third party. The application
+    communicates only with Google's APIs and the operator's own infrastructure.
+  </p>
+
+  <h2>5. Data retention and deletion</h2>
+  <p>
+    Retention is controlled entirely by the operator, who may delete mirrored files from the
+    Drive folder at any time. Revoking the application's access from the Google Account
+    permissions page immediately and permanently ends all access.
+  </p>
+
+  <h2>6. Security</h2>
+  <p>
+    Transfers use HTTPS in both directions and are verified by checksum after completion.
+    Credentials are never committed to source control.
+  </p>
+
+  <hr>
+
+  <h2>7. Terms of use</h2>
+  <p>
+    This application is provided strictly for the operator's personal use, on an "as is" basis,
+    without warranty of any kind, express or implied, including but not limited to warranties of
+    merchantability, fitness for a particular purpose, or non-infringement. The operator accepts
+    all risk arising from its use.
+  </p>
+
+  <h2>8. Limitation of liability</h2>
+  <p>
+    In no event shall the author be liable for any claim, damages, or other liability arising from
+    the use of this application. It is an internal tool with a single user.
+  </p>
+
+  <h2>9. Changes</h2>
+  <p>
+    This page may be updated as the application changes. Continued use constitutes acceptance of
+    the current version.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    Questions about this policy: <a href="mailto:active.node.core@gmail.com">active.node.core@gmail.com</a>
+  </p>
+
+  <footer>
+    Eden Backups · private development application · not affiliated with Google
+  </footer>
+</main>
+</body>
+</html>
